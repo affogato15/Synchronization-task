@@ -82,11 +82,10 @@ def folder_transfer(source_path, dest_path):
             if folder not in dest[1]:
                 
                 os.mkdir('{0}/{1}'.format(dest[0], folder))
-                print(f'\n {folder} is copied to {dest[0]}')
                 item_to_copy = r'{0}/{1}'.format(source[0], folder)
                 dest_path = r'{0}/{1}'.format(dest[0], folder)
                 copy_tree(item_to_copy, dest_path)
-                print(f'\n everything from {item_to_copy} is copied to {dest_path}')
+                print(f'\n {folder} is copied to {dest[0]}')
                 log.write(f'\n folder "{folder}" is copied to {dest[0]}')
             
             # recursive part which goes deeper along directory tree and repeats itself (copies)
