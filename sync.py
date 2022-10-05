@@ -78,7 +78,6 @@ def folder_transfer(source_path, dest_path):
     # Folders copying
  
     if source[1]!=[]:
-        matching_folders=[]
         for folder in source[1]:
             if folder not in dest[1]:
                 
