@@ -1,0 +1,21 @@
+# Synchronization-task
+The script synchronizes the content between two derectories, source one and replica one.
+Namely, it compares the content (names) in directories and copies files and folders, in case it are absent in replica directory,
+and removes files and directories from replica in case if it are not present in corresponding source directory.
+When comparing files, it takes into account not only names but its content also via 'filecmp.cmp' method.
+
+INPUTS:
+path to source directory
+path replica directory
+number of synchronization sessions
+interval between sessions
+
+OUTPUTS:
+returnes messages which reflect number of session and all provided operations, such as copying, removal, replace of a file/folder
+creates a log-file in the derictory of script-file, which contains all returned messages.
+
+POSSIBLE TROUBLES:
+"Access denied" when you have no access to some files/folders
+Differently tilted slashes are used to specify directory pathes, namely "\", "/" or even "\\", that  can cause error
+
+
